@@ -26,8 +26,8 @@ public class Person {
     @Column(nullable = false, unique = true)
     private String cpf;
 
-    @Column(name = "birth_data")
-    private LocalDate birthData;
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
     private List<Phone> phones;
