@@ -1,7 +1,7 @@
-package com.dio.diopersonapi.mapper;
+package com.dio.diopersonapi.dto.mapper;
 
 import com.dio.diopersonapi.dto.request.PersonDTO;
-import com.dio.diopersonapi.entity.Person;
+import com.dio.diopersonapi.entities.Person;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

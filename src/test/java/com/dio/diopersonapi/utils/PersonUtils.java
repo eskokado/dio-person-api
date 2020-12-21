@@ -1,7 +1,7 @@
 package com.dio.diopersonapi.utils;
 
 import com.dio.diopersonapi.dto.request.PersonDTO;
-import com.dio.diopersonapi.entity.Person;
+import com.dio.diopersonapi.entities.Person;
 
 import java.time.LocalDate;
 import java.util.Collections;

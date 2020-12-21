@@ -1,4 +1,4 @@
-package com.dio.diopersonapi.entity;
+package com.dio.diopersonapi.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

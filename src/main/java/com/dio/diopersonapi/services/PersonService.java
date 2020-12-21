@@ -1,11 +1,11 @@
-package com.dio.diopersonapi.service;
+package com.dio.diopersonapi.services;
 
 import com.dio.diopersonapi.dto.request.PersonDTO;
 import com.dio.diopersonapi.dto.response.MessageResponseDTO;
-import com.dio.diopersonapi.entity.Person;
+import com.dio.diopersonapi.entities.Person;
 import com.dio.diopersonapi.exception.PersonNotFoundException;
-import com.dio.diopersonapi.mapper.PersonMapper;
-import com.dio.diopersonapi.repository.PersonRepository;
+import com.dio.diopersonapi.dto.mapper.PersonMapper;
+import com.dio.diopersonapi.repositories.PersonRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

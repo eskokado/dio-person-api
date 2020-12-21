@@ -1,9 +1,9 @@
-package com.dio.diopersonapi.controller;
+package com.dio.diopersonapi.controllers;
 
 import com.dio.diopersonapi.dto.request.PersonDTO;
 import com.dio.diopersonapi.dto.response.MessageResponseDTO;
 import com.dio.diopersonapi.exception.PersonNotFoundException;
-import com.dio.diopersonapi.service.PersonService;
+import com.dio.diopersonapi.services.PersonService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

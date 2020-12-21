@@ -1,7 +1,7 @@
 package com.dio.diopersonapi.utils;
 
 import com.dio.diopersonapi.dto.request.PhoneDTO;
-import com.dio.diopersonapi.entity.Phone;
+import com.dio.diopersonapi.entities.Phone;
 import com.dio.diopersonapi.enums.PhoneType;
 
 public class PhoneUtils {

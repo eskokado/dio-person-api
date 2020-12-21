@@ -1,9 +1,9 @@
-package com.dio.diopersonapi.service;
+package com.dio.diopersonapi.services;
 
 import com.dio.diopersonapi.dto.request.PersonDTO;
 import com.dio.diopersonapi.dto.response.MessageResponseDTO;
-import com.dio.diopersonapi.entity.Person;
-import com.dio.diopersonapi.repository.PersonRepository;
+import com.dio.diopersonapi.entities.Person;
+import com.dio.diopersonapi.repositories.PersonRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
