@@ -1,9 +1,7 @@
 package com.dio.diopersonapi.mapper;
 
 import com.dio.diopersonapi.dto.mapper.PostMapper;
-import com.dio.diopersonapi.dto.request.CommentDTO;
 import com.dio.diopersonapi.dto.request.PostDTO;
-import com.dio.diopersonapi.entities.Comment;
 import com.dio.diopersonapi.entities.Post;
 import com.dio.diopersonapi.utils.PostUtils;
 import org.junit.jupiter.api.Test;
@@ -30,13 +28,6 @@ public class PostMapperTest {
         assertEquals(postDTO.getBody(), post.getBody());
         assertEquals(postDTO.getTitle(), post.getTitle());
         assertEquals(postDTO.getDate(), post.getDate().format( DateTimeFormatter.ofPattern( "yyyy-MM-dd" )));
-
-        Comment comment = post.getComments().get(0);
-        CommentDTO commentDTO = postDTO.getComments().get(0);
-
-        assertEquals(commentDTO.getText(), comment.getText());
-        assertEquals(commentDTO.getAuthor().getFirstName(), comment.getAuthor().getFirstName());
-        assertEquals(commentDTO.getAuthor().getLastName(), comment.getAuthor().getLastName());
     }
 
     @Test
@@ -51,13 +42,6 @@ public class PostMapperTest {
         assertEquals(post.getBody(), postDTO.getBody());
         assertEquals(post.getTitle(), postDTO.getTitle());
         assertEquals(post.getDate().format( DateTimeFormatter.ofPattern( "yyyy-MM-dd")), postDTO.getDate());
-
-        Comment comment = post.getComments().get(0);
-        CommentDTO commentDTO = postDTO.getComments().get(0);
-
-        assertEquals(comment.getText(), commentDTO.getText());
-        assertEquals(comment.getAuthor().getFirstName(), commentDTO.getAuthor().getFirstName());
-        assertEquals(comment.getAuthor().getLastName(), commentDTO.getAuthor().getLastName());
     }
 
 }

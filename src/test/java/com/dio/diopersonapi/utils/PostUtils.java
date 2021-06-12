@@ -4,7 +4,6 @@ import com.dio.diopersonapi.dto.request.PostDTO;
 import com.dio.diopersonapi.entities.Post;
 
 import java.time.LocalDate;
-import java.util.Collections;
 
 public class PostUtils {
 
@@ -15,11 +14,11 @@ public class PostUtils {
 
     public static PostDTO createFakeDTO() {
         return PostDTO.builder()
+                .id(POST_ID)
                 .title(TITLE)
                 .body(BODY)
                 .date("2021-06-09")
                 .author(AuthorUtils.createFakeDTO())
-                .comments(Collections.singletonList(CommentUtils.createFakeDTO()))
                 .build();
     }
 
@@ -30,7 +29,6 @@ public class PostUtils {
                 .body(BODY)
                 .date(DATE)
                 .author(AuthorUtils.createFakeEntity())
-                .comments(Collections.singletonList(CommentUtils.createFakeEntity()))
                 .build();
     }
 }

@@ -16,6 +16,7 @@ public class AuthorUtils {
 
     public static AuthorDTO createFakeDTO() {
         return AuthorDTO.builder()
+                .id(PERSON_ID)
                 .firstName(FIRST_NAME)
                 .lastName(LAST_NAME)
                 .build();

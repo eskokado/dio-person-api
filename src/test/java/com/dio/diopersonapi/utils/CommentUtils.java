@@ -13,9 +13,11 @@ public class CommentUtils {
 
     public static CommentDTO createFakeDTO() {
         return CommentDTO.builder()
+                .id(COMMENT_ID)
                 .text(TEXT)
                 .date("2021-06-09")
                 .author(AuthorUtils.createFakeDTO())
+                .post(PostUtils.createFakeDTO())
                 .build();
     }
 
@@ -25,6 +27,7 @@ public class CommentUtils {
                 .text(TEXT)
                 .date(DATE)
                 .author(AuthorUtils.createFakeEntity())
+                .post(PostUtils.createFakeEntity())
                 .build();
     }
 

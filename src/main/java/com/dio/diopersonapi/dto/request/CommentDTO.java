@@ -5,9 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
@@ -17,8 +14,6 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 public class CommentDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotEmpty
@@ -28,6 +23,7 @@ public class CommentDTO {
     @NotEmpty
     private String date;
 
-    @NotEmpty
     private AuthorDTO author;
+
+    private PostDTO post;
 }

@@ -5,12 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.util.List;
 
 @Data
 @Builder
@@ -18,8 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 public class PostDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotEmpty
@@ -34,6 +28,4 @@ public class PostDTO {
     private String date;
 
     private AuthorDTO author;
-
-    private List<CommentDTO> comments;
 }

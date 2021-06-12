@@ -2,6 +2,7 @@ package com.dio.diopersonapi.utils;
 
 import com.dio.diopersonapi.dto.request.PersonDTO;
 import com.dio.diopersonapi.entities.Person;
+import com.sun.istack.Nullable;
 
 import java.time.LocalDate;
 import java.util.Collections;
@@ -16,6 +17,7 @@ public class PersonUtils {
 
     public static PersonDTO createFakeDTO() {
         return PersonDTO.builder()
+                .id(PERSON_ID)
                 .firstName(FIRST_NAME)
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)

@@ -24,6 +24,8 @@ public class CommentMapperTest {
 
         assertEquals(commentDTO.getAuthor().getFirstName(), comment.getAuthor().getFirstName());
         assertEquals(commentDTO.getAuthor().getLastName(), comment.getAuthor().getLastName());
+        assertEquals(commentDTO.getPost().getTitle(), comment.getPost().getTitle());
+        assertEquals(commentDTO.getPost().getBody(), comment.getPost().getBody());
         assertEquals(commentDTO.getText(), comment.getText());
         assertEquals(commentDTO.getDate(), comment.getDate().format( DateTimeFormatter.ofPattern( "yyyy-MM-dd")));
     }
@@ -35,6 +37,8 @@ public class CommentMapperTest {
 
         assertEquals(comment.getAuthor().getFirstName(), commentDTO.getAuthor().getFirstName());
         assertEquals(comment.getAuthor().getLastName(), commentDTO.getAuthor().getLastName());
+        assertEquals(comment.getPost().getTitle(), commentDTO.getPost().getTitle());
+        assertEquals(comment.getPost().getBody(), commentDTO.getPost().getBody());
         assertEquals(comment.getText(), commentDTO.getText());
         assertEquals(comment.getDate().format( DateTimeFormatter.ofPattern( "yyyy-MM-dd")), commentDTO.getDate());
     }
