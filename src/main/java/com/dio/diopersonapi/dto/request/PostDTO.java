@@ -33,9 +33,7 @@ public class PostDTO {
     @NotEmpty
     private String date;
 
-    @NotEmpty
     private AuthorDTO author;
 
-    @NotEmpty
     private List<CommentDTO> comments;
 }
