@@ -31,7 +31,7 @@ public class PersonService {
         verifyIfExists(id);
         Person personToUpdate = personMapper.toModel(personDTO);
         Person updatedPerson = personRepository.save(personToUpdate);
-        return createMessageResponse(updatedPerson.getId(), "Update person with ID ");
+        return createMessageResponse(updatedPerson.getId(), "Updated person with ID ");
     }
 
     public List<PersonDTO> listAll() {
@@ -56,7 +56,7 @@ public class PersonService {
                 .build();
     }
 
-    private Person verifyIfExists(Long id) throws PersonNotFoundException {
+    public Person verifyIfExists(Long id) throws PersonNotFoundException {
         return personRepository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
     }
 
