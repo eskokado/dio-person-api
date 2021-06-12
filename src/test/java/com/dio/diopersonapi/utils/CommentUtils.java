@@ -14,7 +14,7 @@ public class CommentUtils {
     public static CommentDTO createFakeDTO() {
         return CommentDTO.builder()
                 .text(TEXT)
-                .date("09-06-2021")
+                .date("2021-06-09")
                 .author(AuthorUtils.createFakeDTO())
                 .build();
     }

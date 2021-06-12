@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.format.DateTimeFormatter;
-import java.time.format.ResolverStyle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,10 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CommentMapperTest {
     @Autowired
     private CommentMapper commentMapper;
-
-    private DateTimeFormatter fmt = DateTimeFormatter
-            .ofPattern("dd/MM/yyyy")
-            .withResolverStyle(ResolverStyle.STRICT);
 
     @Test
     void testGivenCommentDTOThenReturnCommentEntity() {
@@ -30,7 +25,7 @@ public class CommentMapperTest {
         assertEquals(commentDTO.getAuthor().getFirstName(), comment.getAuthor().getFirstName());
         assertEquals(commentDTO.getAuthor().getLastName(), comment.getAuthor().getLastName());
         assertEquals(commentDTO.getText(), comment.getText());
-        assertEquals(commentDTO.getDate(), comment.getDate().format( DateTimeFormatter.ofPattern( "dd-MM-yyyy")));
+        assertEquals(commentDTO.getDate(), comment.getDate().format( DateTimeFormatter.ofPattern( "yyyy-MM-dd")));
     }
 
     @Test

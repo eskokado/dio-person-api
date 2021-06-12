@@ -7,20 +7,25 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Comment {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, name = "text")
-    private String text;
+    @Column(nullable = false, name = "title")
+    private String title;
+
+    @Column(nullable = false, name = "body")
+    private String body;
 
     @Column(nullable = false, name = "date")
     private LocalDate date;
@@ -29,7 +34,6 @@ public class Comment {
     @JoinColumn (name="author_id",nullable=false)
     private Person author;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn (name="post_id",nullable=false)
-    private Post post;
+    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
+    private List<Comment> comments = new ArrayList<>();
 }

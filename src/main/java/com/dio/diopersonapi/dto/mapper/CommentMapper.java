@@ -11,7 +11,7 @@ public interface CommentMapper {
 
     CommentMapper INSTANCE = Mappers.getMapper(CommentMapper.class);
 
-    @Mapping(target = "date", source = "date", dateFormat = "dd-MM-yyyy")
+    @Mapping(target = "date", source = "date", dateFormat = "yyyy-MM-dd")
     Comment toModel(CommentDTO commentDTO);
 
     CommentDTO toDTO(Comment comment);
