@@ -22,7 +22,7 @@ public class CommentDTOBuilder {
     @Builder.Default
     private PostDTO post = PostDTOBuilder.builder().build().toPostDTO();
 
-    public CommentDTO toPostDTO() {
+    public CommentDTO toCommentDTO() {
         CommentDTO commentDTO = new CommentDTO();
         commentDTO.setId(id);
         commentDTO.setText(text);
